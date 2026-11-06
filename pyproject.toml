@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrapedo-haystack"
+version = "0.1.0"
+description = "Fetch web pages through the Scrape.do API in Haystack pipelines and agents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{ name = "Scrape.do" }]
+keywords = ["haystack", "scrape.do", "web scraping", "rag", "llm"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+dependencies = ["haystack-ai>=2.0", "requests>=2.28"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://scrape.do"
+Documentation = "https://scrape.do/documentation/"
+Source = "https://github.com/bugrahansss/scrapedo-haystack"
+Issues = "https://github.com/bugrahansss/scrapedo-haystack/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scrapedo_haystack"]
